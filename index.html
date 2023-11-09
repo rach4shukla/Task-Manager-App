@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Group 2 Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header><h1>Group 2: JavaScript Project</h1></header>
+      <div class="container">
+        <div class="left-column">
+          <h1>Task Manager</h1>
+          <div class="flex-container">
+            <div class="flex-item">
+              <label for="taskName">Task Name:</label>
+              <input type="text" id="taskName" />
+            </div>
+            <div class="flex-item">
+              <label for="taskDescription">Task Description:</label>
+              <input type="text" id="taskDescription" />
+            </div>
+            <div class="flex-item">
+              <label for="taskType">Task Type:</label>
+              <select id="taskType">
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+              </select>
+            </div>
+            <div class="flex-item">
+              <label for="taskPriority">Task Priority:</label>
+              <select id="taskPriority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+            <div class="flex-item">
+              <label for="assignedTo">Assigned To:</label>
+              <input type="text" id="assignedTo" />
+            </div>
+          </div>
+          <div class="button-item">
+            <button onclick="addTask()">Add Task</button>
+          </div>
+        </div>
+        <div class="right-column">
+          <div>
+            <label for="search">Search Tasks:</label>
+            <input type="text" id="search" oninput="filterTasks()" />
+          </div>
+
+          <div id="allTaskList"></div>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </main>
+  </body>
+</html>
